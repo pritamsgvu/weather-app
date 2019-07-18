@@ -1,0 +1,8 @@
+{
+    "/2.5/*": {
+        "target": "https://openweathermap.org/data",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

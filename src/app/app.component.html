@@ -1,0 +1,30 @@
+<div class="city-block">
+  <label> Enter City Name: </label>
+  <input type="text" placeholder="Enter city name like: delhi" [(ngModel)]="cityName">
+  <button (click)="onSubmitForm()">Submit</button>
+</div>
+
+<div class="container">
+
+  <div *ngIf="loading else loaded">
+    Loading ...
+  </div>
+
+  <ng-template #loaded>
+    <div *ngFor="let weatherData of weather" class="weather" [@fadeInOut]>
+      <p>{{weatherData?.dt_txt | date:'short'}}</p>
+      <div class="temp-img">
+        <img src="http://openweathermap.org/img/wn/{{weatherData?.weather[0]?.icon}}.png" alt="">
+      </div>
+      <div class="temp-min">
+        <strong>{{weatherData?.main?.temp_max}}°C</strong> / {{weatherData?.main?.temp_min}}°C
+      </div>
+      <div class="additional-info">
+        <div class="info"><strong>Current Temp:</strong> {{weatherData?.main?.temp}}°C</div>
+        <div class="info"><strong>Humidity:</strong> {{weatherData?.main?.humidity}} </div>
+        <div class="info"><strong>Weather:</strong> {{weatherData?.weather[0].description}} </div>
+      </div>
+    </div>
+  </ng-template>
+
+</div>

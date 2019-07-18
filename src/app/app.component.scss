@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: block;
+  margin: 15px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.city-block {
+  display: block;
+  padding: 50px 0;
+  background: #f2f2f2;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.city-block label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+.city-block input {
+  background: #fff;
+  border: 1px #ddd solid;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.city-block button {
+  background: #000;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+  display: inline-block;
+}
+.weather {
+  background-color: #f2f2f2;
+  margin: 5px;
+  padding: 30px;
+  width: calc(20% - 70px);
+  float: left;
+  border-radius: 5px;
+}
+.weather .temp-img {
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+.weather .temp-img img {
+  width: 90px;
+}
+.weather p {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color:green;
+  margin: 0;
+}
+.temp-min {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.additional-info {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+}
+.info {
+  display: block;
+  margin-bottom: 10px;
+}
