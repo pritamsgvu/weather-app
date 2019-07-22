@@ -14,13 +14,13 @@ export class RestService {
   apiId = 'b6907d289e10d714a6e88b30761fae22&_=1563365150617';
   // Fetch weather data
   getWeatherData(lat: any, long: any): Observable<any> {
-    const url = `/2.5/forecast?lat=${lat}&lon=${long}&cnt=10&appid=${this.apiId}`;
+    const url = `https://openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&cnt=10&appid=${this.apiId}`;
     return this.http.get(url).pipe(
       map((res: any) => res), catchError(this.handleError));
   }
   // Fetch location lat lon
   getlatLong(city: any): Observable<any> {
-    const url = `/2.5/find?q=${city}&type=like&sort=population&cnt=30&appid=${this.apiId}`;
+    const url = `https://openweathermap.org/data/2.5/find?q=${city}&type=like&sort=population&cnt=30&appid=${this.apiId}`;
     return this.http.get(url).pipe(
       map((res: any) => res),
       catchError(this.handleError)
